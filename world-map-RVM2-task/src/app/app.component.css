@@ -1,0 +1,6 @@
+div {
+  display: grid;
+  grid-template-columns: 90% 50%;
+  background-color: lightblue;
+}
+

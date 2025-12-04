@@ -1,0 +1,26 @@
+<router-outlet>
+  <!---Column ID added for easy identification of step E completion-->
+  <div>
+    <div id="column1">
+        <app-world-map
+          (svgIdSelected)="onSvgIdSelected($event)"
+          (capitalSelected)="onCapitalSelected($event)"
+          (regionSelected)="onRegionSelected($event)"
+          (incomeLevelSelected)="onIncomeLevelSelected($event)"
+          (latitudeSelected)="onLatitudeSelected($event)"
+          (longitudeSelected)="onLongitudeSelected($event)">
+        </app-world-map>
+    </div>
+
+    <div id="column2">
+        <app-country-info
+          [countryId] = "selectedSvgId"
+          [countryCapital] = "selectedCapital"
+          [countryRegion] = "selectedRegion"
+          [countryIncomeLevel] = "selectedIncomeLevel"
+          [countryLatitude] = "selectedLatitude"
+          [countryLongitude] = "selectedLongitude">
+        </app-country-info>
+  </div>
+</div>
+</router-outlet>
